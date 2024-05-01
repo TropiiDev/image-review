@@ -1,0 +1,64 @@
+
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+  }
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "card card card";
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.card-holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "image"
+        "text"
+        "review";
+}
+
+.card ul { 
+    list-style-type: none;
+    padding: 0;
+}
+
+.card img {
+    width: 250px;
+    height: 250px;
+    grid-area: image;
+}
+
+.card {
+    background-color: var(--dkblue);
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 5px;
+}
