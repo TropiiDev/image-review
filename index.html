@@ -7,65 +7,99 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxygen+Mono&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
-    <div class="page">
-        <section class="card-holder">
-            <ul class="card">
-                <img class="card-image" src="/assets/images/1.jpg" alt="image">
-                <div class="card-text">
-                    <li class="card-title">Moon</li>
-                    <li class="card-description">This is the first image</li>
-                    <ul class="card-reviews">
-                        <li class="card-review">This is great!</li>
-                        <li class="card-review">How awesome!!</li>
-                        <li class="card-review">Is this off google?</li>
-                    </ul>
-                </div>
-            </ul>
-            <ul class="card">
-                <img class="card-image" src="/assets/images/1.jpg" alt="image">
-                <div class="card-text">
-                    <li class="card-title">Moon</li>
-                    <li class="card-description">This is the first image</li>
-                    <ul class="card-reviews">
-                        <li class="card-review">This is great!</li>
-                        <li class="card-review">How awesome!!</li>
-                        <li class="card-review">Is this off google?</li>
-                    </ul>
-                </div>
-            </ul>
-            <ul class="card">
-                <img class="card-image" src="/assets/images/1.jpg" alt="image">
-                <div class="card-text">
-                    <li class="card-title">Moon</li>
-                    <li class="card-description">This is the first image</li>
-                    <ul class="card-reviews">
-                        <li class="card-review">This is great!</li>
-                        <li class="card-review">How awesome!!</li>
-                        <li class="card-review">Is this off google?</li>
-                    </ul>
-                </div>
-            </ul>
-            <ul class="card">
-                <img class="card-image" src="/assets/images/1.jpg" alt="image">
-                <div class="card-text">
-                    <li class="card-title">Moon</li>
-                    <li class="card-description">This is the first image</li>
-                    <ul class="card-reviews">
-                        <li class="card-review">This is great!</li>
-                        <li class="card-review">How awesome!!</li>
-                        <li class="card-review">Is this off google?</li>
-                    </ul>
-                </div>
-            </ul>
-        </section>
-        <section class="create-card">
-            <input placeholder="enter img" />
-            <input placeholder="enter title" />
-            <input placeholder="enter description" />
-        </section>
-    </div>
+  <nav>
+    <ul>
+      <li>
+        <h1>
+          <a href="index.html">
+            <span class="fas fa-code" aria-hidden="true"></span>
+            <span>Image Review</span>
+          </a>
+        </h1>
+      </li>
+      <li><a href="#images">Images</a></li>
+      <li><a href="#create">Create</a></li>
+      <li><button class="ac-button">Login</button></li>
+      <li><button class="ac-button">Create Account</button></li>
+    </ul>
+  </nav>
+
+  <div class="page">
+    <h2 id="images" class="title">Images</h2>
+    <section class="card-holder">
+        <ul class="card">
+            <img class="card-image" src="/assets/images/1.jpg" alt="image">
+            <div class="card-text">
+                <li class="card-title">Moon</li>
+                <li class="card-description">This is the first image</li>
+                <ul class="card-reviews">
+                    <li class="card-review">This is great!</li>
+                    <li class="card-review">How awesome!!</li>
+                    <li class="card-review">Is this off google?</li>
+                </ul>
+            </div>
+        </ul>
+        <ul class="card">
+            <img class="card-image" src="/assets/images/1.jpg" alt="image">
+            <div class="card-text">
+                <li class="card-title">Moon</li>
+                <li class="card-description">This is the first image</li>
+                <ul class="card-reviews">
+                    <li class="card-review">This is great!</li>
+                    <li class="card-review">How awesome!!</li>
+                    <li class="card-review">Is this off google?</li>
+                </ul>
+            </div>
+        </ul>
+        <ul class="card">
+            <img class="card-image" src="/assets/images/1.jpg" alt="image">
+            <div class="card-text">
+                <li class="card-title">Moon</li>
+                <li class="card-description">This is the first image</li>
+                <ul class="card-reviews">
+                    <li class="card-review">This is great!</li>
+                    <li class="card-review">How awesome!!</li>
+                    <li class="card-review">Is this off google?</li>
+                </ul>
+            </div>
+        </ul>
+        <ul class="card">
+            <img class="card-image" src="/assets/images/1.jpg" alt="image">
+            <div class="card-text">
+                <li class="card-title">Moon</li>
+                <li class="card-description">This is the first image</li>
+                <ul class="card-reviews">
+                    <li class="card-review">This is great!</li>
+                    <li class="card-review">How awesome!!</li>
+                    <li class="card-review">Is this off google?</li>
+                </ul>
+            </div>
+        </ul>
+    </section>
+    <h2 id="create" class="title">Post an Image</h2>
+    <section class="create-section">
+        <form class="create-card">
+          <div class="input-group">
+            <label for="image" class="user-input-label">Image</label>
+            <input type="file" class="image user-input" id="image" name="image" accept="image/*" required />
+          </div>
+          <div class="input-group">
+            <label for="title" class="user-input-label">Title</label>
+            <input type="text" class="user-input" id="title" name="title" required />
+          </div>
+          <div class="input-group">
+            <label for="description" class="user-input-label">Description</label>
+            <textarea id="description" class="user-input" name="description" required></textarea>
+          </div>
+          <button class="create-btn" type="submit">Post</button>
+        </form>
+    </section>
+  </div>
+
+    <script src="/assets/js/index.js"></script>
 </body>
 </html>
