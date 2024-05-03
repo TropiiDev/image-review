@@ -8,7 +8,7 @@ for (let i = 0; i < accountManagerButtons.length; i++) {
 }
 
 async function createImage(image, title, description) {
-  const response = await fetch('https://api.tropii.xyz/images', {
+  const response = await fetch('https://api.tropii.xyz/create-images', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -18,6 +18,34 @@ async function createImage(image, title, description) {
       "title": title,
       "description": description,
     })
+  });
+
+  const data = await response.json();
+  console.log(data);
+}
+
+async function uploadReview(imageId, review) {
+  const response = await fetch('https://api.tropii.xyz/upload-review', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      "imageId": imageId,
+      "review": review,
+    })
+  });
+
+  const data = await response.json();
+  console.log(data);
+}
+
+async function getImages() {
+  const response = await fetch('https://api.tropii.xyz/get-images', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
   });
 
   const data = await response.json();
